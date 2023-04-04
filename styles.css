@@ -1,17 +1,23 @@
 /* ************************************************************
-   Global properties 
+   Global properties and styles
    ************************************************************
 */
 
 :root {
     box-sizing: border-box;
 
-    --main-color: #333;
-    --secondary-color: #888;
-    --main-background-color: #d0d0d0;
-    --secondary-background-color: #f0f0f0;
+    --main-color: #257b7b;
+    --secondary-color: #944A1F;
+    --main-background-color: #e2eaeb;
+    --secondary-background-color: #fefdfd;
     --dark-letter-color: #111;
     --light-letter-color: #fefefe;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-weight: 600;
 }
 
 /* ************************************************************
@@ -75,6 +81,8 @@ header {
     text-decoration: none;
     color: var(--dark-letter-color);
     text-align: end;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .header-userid-profileimg {
@@ -103,10 +111,13 @@ header {
 
 .header-usergreeting-text {
     align-self: end;
+    font-size: 0.9rem;
 }
 
 .header-usergreeting-username {
     align-self: start;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .header-buttons {
@@ -182,7 +193,7 @@ nav a {
 }
 
 nav a:hover {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* ************************************************************
@@ -196,6 +207,7 @@ main {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 1rem;
+    align-items: start;
 }
 
 main h2 {
@@ -245,6 +257,11 @@ article {
     color: var(--dark-letter-color);
 }
 
+.article-text h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
 .article-text p {
     max-height: 6rem;
     overflow: hidden;
@@ -253,6 +270,7 @@ article {
 
 .article-status {
     align-self: center;
+    font-size: 0.9rem;
 }
 
 .article-status-draft {
@@ -320,12 +338,13 @@ aside h2 {
 }
 
 .comments-card-comment p:first-child {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .comments-card-comment p:last-child {
     max-height: 4.5rem;
     overflow: hidden;
+    font-size: 0.8rem;
 }
 
 .analytics-card {
@@ -350,6 +369,7 @@ aside h2 {
 
 .analytics-card-trend p {
     margin: 0;
+    font-size: 0.9rem;
 }
 
 .trend-up {
