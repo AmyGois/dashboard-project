@@ -7,17 +7,29 @@
     box-sizing: border-box;
 
     --main-color: #257b7b;
+    --main-filter: invert(35%) sepia(66%) saturate(434%) hue-rotate(131deg) brightness(101%) contrast(89%);
+
     --secondary-color: #944A1F;
+    --secondary-filter: invert(28%) sepia(99%) saturate(404%) hue-rotate(338deg) brightness(99%) contrast(96%);
+
     --main-background-color: #e2eaeb;
     --secondary-background-color: #fefdfd;
+
     --dark-letter-color: #111;
+    --dark-letter-filter: invert(5%) sepia(7%) saturate(21%) hue-rotate(314deg) brightness(91%) contrast(95%);
+
+    --semi-dark-letter-color: #333;
+    --semi-dark-letter-filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(251deg) brightness(90%) contrast(86%);
+
     --light-letter-color: #fefefe;
+    --light-letter-filter: invert(100%) sepia(1%) saturate(4269%) hue-rotate(223deg) brightness(109%) contrast(99%);
 
     font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
     font-weight: 600;
+    color: var(--dark-letter-color);
 }
 
 /* ************************************************************
@@ -45,10 +57,13 @@ header {
     grid-template-columns: minmax(150px, 2fr) minmax(150px, 1fr);
     grid-template-rows: 1fr 2fr;
     gap: 1rem;
+    box-shadow: 0 3px 3px #c0c0c0;
+    z-index: 1;
 }
 
 .header-icon {
     max-width: 1.5rem;
+    filter: var(--dark-letter-filter);
 }
 
 .header-searchbar {
@@ -107,6 +122,7 @@ header {
 
 .header-usergreeting p {
     margin: 0;
+    color: var(--dark-letter-color);
 }
 
 .header-usergreeting-text {
@@ -123,7 +139,7 @@ header {
 .header-buttons {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: end;
     gap: 1rem;
 }
 
@@ -172,6 +188,8 @@ nav li {
 .dashboard-logo img {
     max-width: 2.5rem;
     justify-self: center;
+    filter: var(--light-letter-filter);
+    
 }
 
 nav ul {
@@ -185,6 +203,7 @@ nav ul {
 nav ul img {
     max-width: 1.5rem;
     justify-self: center;
+    filter: var(--light-letter-filter);
 }
 
 nav a {
@@ -219,6 +238,7 @@ article,
 .analytics-card {
     border-radius: 10px;
     background-color: var(--secondary-background-color);
+    box-shadow: 2px 3px 3px #c0c0c0;
 }
 
 /* ************************************************************
@@ -236,6 +256,7 @@ article,
 
 .articles h2 {
     grid-column: 1 / -1;
+    color: var(--dark-letter-color);
 }
 
 article {
@@ -254,12 +275,12 @@ article {
 .article-text h3,
 .article-text p {
     margin: 0;
-    color: var(--dark-letter-color);
+    color: var(--semi-dark-letter-color);
 }
 
 .article-text h3 {
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .article-text p {
@@ -291,10 +312,12 @@ article {
     padding: 0;
     border: none;
     align-self: center;
+    background-color: var(--secondary-background-color);
 }
 
 .article-buttons img {
     max-width: 1.5rem;
+    filter: var(--dark-letter-filter);
 }
 
 /* ************************************************************
@@ -339,12 +362,14 @@ aside h2 {
 
 .comments-card-comment p:first-child {
     font-weight: 600;
+    color: var(--dark-letter-color);
 }
 
 .comments-card-comment p:last-child {
     max-height: 4.5rem;
     overflow: hidden;
     font-size: 0.8rem;
+    color: var(--semi-dark-letter-color);
 }
 
 .analytics-card {
@@ -367,9 +392,21 @@ aside h2 {
     border-radius: 100%;
 }
 
+.trend-up-img {
+    filter: var(--main-filter);
+}
+
+.trend-down-img {
+    filter: var(--secondary-filter);
+}
+
 .analytics-card-trend p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+.analytics-card-trend p:first-child {
+    color: var(--dark-letter-color);
 }
 
 .trend-up {
