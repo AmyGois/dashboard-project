@@ -1,5 +1,31 @@
+/* Contents:
+
+    1. Global properties and styles
+    
+    2. Page layout
+
+    3. Header
+        - Search bar
+        - User profile/ID
+        - Greeting
+        - Buttons
+
+    4. Navigation sidebar
+        - Dashboard logo
+        - Links
+    
+    5. Main body of the page
+
+        5.1. Articles section
+            - Article card
+        
+        5.2. Asides section
+            - Comments card
+            - Analytics card
+*/
+
 /* ************************************************************
-   Global properties and styles
+   1. Global properties and styles
    ************************************************************
 */
 
@@ -27,18 +53,24 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-h2 {
-    font-weight: 600;
-    color: var(--dark-letter-color);
+body,
+.header-usergreeting p,
+nav h1,
+nav ul,
+main h2,
+.article-text h3,
+.article-text p,
+.comments-card-comment p,
+.analytics-card-trend p {
+    margin: 0;
 }
 
 /* ************************************************************
-   Page layout
+   2. Page layout
    ************************************************************
 */
 
 body {
-    margin: 0;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: minmax(150px, 20vh);
@@ -46,7 +78,7 @@ body {
 }
 
 /* ************************************************************
-   Header
+   3. Header
    ************************************************************
 */
 
@@ -66,6 +98,8 @@ header {
     filter: var(--dark-letter-filter);
 }
 
+/* - Search bar */
+
 .header-searchbar {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -84,6 +118,8 @@ header {
     border-radius: 8px;
     border: none;
 }
+
+/* - User profile/ID */
 
 .header-userid {
     display: flex;
@@ -105,6 +141,8 @@ header {
     border-radius: 100%;
 }
 
+/* - Greeting */
+
 .header-usergreeting {
     display: grid;
     grid-template-columns: auto auto;
@@ -121,7 +159,6 @@ header {
 }
 
 .header-usergreeting p {
-    margin: 0;
     color: var(--dark-letter-color);
 }
 
@@ -135,6 +172,8 @@ header {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
+/* - Buttons */
 
 .header-buttons {
     display: flex;
@@ -158,7 +197,7 @@ header {
 }
 
 /* ************************************************************
-   Navigation sidebar
+   4. Navigation sidebar
    ************************************************************
 */
 
@@ -173,9 +212,7 @@ nav {
     align-content: start;
 }
 
-nav h1, nav ul {
-    margin: 0;
-}
+/* - Dashboard logo */
 
 .dashboard-logo, 
 nav li {
@@ -191,6 +228,8 @@ nav li {
     filter: var(--light-letter-filter);
     
 }
+
+/* - Links */
 
 nav ul {
     list-style: none;
@@ -216,7 +255,7 @@ nav a:hover {
 }
 
 /* ************************************************************
-   Main body of the page
+   5. Main body of the page
    ************************************************************
 */
 
@@ -230,7 +269,8 @@ main {
 }
 
 main h2 {
-    margin: 0;
+    font-weight: 600;
+    color: var(--dark-letter-color);
 }
 
 article,
@@ -242,7 +282,7 @@ article,
 }
 
 /* ************************************************************
-   --Articles section
+   5.1. Articles section
    ************************************************************
 */
 
@@ -259,6 +299,8 @@ article,
     color: var(--dark-letter-color);
 }
 
+/* - Article card */
+
 article {
     display: grid;
     grid-template-rows: auto auto;
@@ -274,7 +316,6 @@ article {
 
 .article-text h3,
 .article-text p {
-    margin: 0;
     color: var(--semi-dark-letter-color);
 }
 
@@ -321,7 +362,7 @@ article {
 }
 
 /* ************************************************************
-   --Asides section
+   5.2. Asides section
    ************************************************************
 */
 
@@ -342,6 +383,8 @@ aside h2 {
     padding: 1rem;
 }
 
+/* - Comments card */
+
 .comments-card-comment {
     border-bottom: 1px solid var(--dark-letter-color);
     padding: 1rem 0;
@@ -356,10 +399,6 @@ aside h2 {
     padding-bottom: 0;
 }
 
-.comments-card-comment p {
-    margin: 0;
-}
-
 .comments-card-comment p:first-child {
     font-weight: 600;
     color: var(--dark-letter-color);
@@ -371,6 +410,8 @@ aside h2 {
     font-size: 0.8rem;
     color: var(--semi-dark-letter-color);
 }
+
+/* - Analytics card */
 
 .analytics-card {
     display: flex;
@@ -401,7 +442,6 @@ aside h2 {
 }
 
 .analytics-card-trend p {
-    margin: 0;
     font-size: 0.9rem;
 }
 
